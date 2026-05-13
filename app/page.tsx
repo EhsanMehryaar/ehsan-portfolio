@@ -44,7 +44,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-28">
         <div>
           <p className="inline-flex rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-sm font-medium text-blue-200">
-            Data Scientist | Machine Learning | Advertising Analytics
+            Data Scientist | Machine Learning | Data Products
           </p>
 
           <h1 className="mt-6 max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
