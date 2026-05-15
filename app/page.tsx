@@ -6,10 +6,10 @@ export default function Home() {
   const [showDashboard, setShowDashboard] = useState(false);
 
   const dashboardUrl =
-    "https://ad-relevance-ctr-prediction-a6cwqh6yt5ljqkret9wchb.streamlit.app?embedded=true";
+    "https://creative-recommendation-engine-for-video-ads-bcc6xhvz25jj7khcj.streamlit.app/?embedded=true";
 
   const dashboardUrlFull =
-    "https://ad-relevance-ctr-prediction-a6cwqh6yt5ljqkret9wchb.streamlit.app";
+    "https://creative-recommendation-engine-for-video-ads-bcc6xhvz25jj7khcj.streamlit.app/";
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -91,16 +91,101 @@ export default function Home() {
             Featured Project
           </p>
           <h2 className="mt-3 text-4xl font-bold tracking-tight">
-            Ad Relevance & CTR Prediction
+            Creative Recommendation Engine for Video Ads
           </h2>
           <p className="mt-4 max-w-3xl text-slate-300">
-            A portfolio-ready machine learning project aligned with advertising,
-            ranking, recommendation, and business optimization problems.
+            A product-oriented video ad creative recommendation engine that ranks
+            creatives by predicted engagement, relevance, and context fit.
           </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Project Summary */}
+          <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-8">
+            <h3 className="text-2xl font-bold">Project Overview</h3>
+
+            <p className="mt-4 leading-7 text-slate-300">
+              This project simulates an ads-quality recommendation system for
+              video creatives, generating synthetic impression-level data and
+              ranking candidates by predicted engagement across segment, device,
+              category, and campaign context.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <button
+                onClick={() => setShowDashboard(true)}
+                className="rounded-xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-blue-400"
+              >
+                Open Interactive Dashboard
+              </button>
+
+              <a
+                href="https://github.com/EhsanMehryaar/Creative-Recommendation-Engine-for-Video-Ads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
+              >
+                View GitHub Repository
+              </a>
+            </div>
+          </div>
+
+          {/* Problem Approach Outcome */}
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-200">
+                01
+              </div>
+              <h4 className="text-lg font-semibold">Problem</h4>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Help advertisers serve the right video creative to the right
+                audience by ranking ads on predicted engagement and relevance.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-200">
+                02
+              </div>
+              <h4 className="text-lg font-semibold">Approach</h4>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Generated synthetic impression-level data, engineered relevance
+                features, performed EDA, and built a ranking model with a
+                Streamlit dashboard for recommendations and diagnostics.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-200">
+                03
+              </div>
+              <h4 className="text-lg font-semibold">Outcome</h4>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Delivered an interactive recommendation demo with KPI cards,
+                ranked creative suggestions, explainability, evaluation charts,
+                and product insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="mb-8">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-300">
+            Previous Project
+          </p>
+          <h2 className="mt-3 text-4xl font-bold tracking-tight">
+            Ad Relevance & CTR Prediction
+          </h2>
+          <p className="mt-4 max-w-3xl text-slate-300">
+            An earlier advertising analytics project demonstrating click-through
+            rate prediction, ad relevance scoring, and an interactive
+            Streamlit dashboard.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-8">
             <h3 className="text-2xl font-bold">Project Overview</h3>
 
@@ -113,13 +198,6 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <button
-                onClick={() => setShowDashboard(true)}
-                className="rounded-xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-blue-400"
-              >
-                Open Interactive Dashboard
-              </button>
-
               <a
                 href="https://github.com/EhsanMehryaar/Ad-Relevance-CTR-Prediction"
                 target="_blank"
@@ -131,7 +209,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Problem Approach Outcome */}
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6">
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-200">
@@ -190,6 +267,11 @@ export default function Home() {
             "Model Evaluation",
             "CTR Prediction",
             "Ad Relevance",
+            "Recommendation Engines",
+            "Ranking Metrics",
+            "NDCG",
+            "Lift@K",
+            "Synthetic Data",
             "GitHub",
             "Transportation Analytics",
             "LiDAR Analytics",
@@ -253,7 +335,7 @@ export default function Home() {
                   Interactive Dashboard
                 </h3>
                 <p className="text-sm text-slate-400">
-                  Ad Relevance & CTR Prediction
+                  Creative Recommendation Engine for Video Ads
                 </p>
               </div>
 
@@ -278,7 +360,7 @@ export default function Home() {
 
             <iframe
               src={dashboardUrl}
-              title="Ad Relevance CTR Prediction Dashboard"
+              title="Creative Recommendation Engine for Video Ads Dashboard"
               className="h-[calc(90vh-73px)] w-full bg-white"
               loading="lazy"
             />
