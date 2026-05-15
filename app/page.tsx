@@ -3,13 +3,20 @@
 import { useState } from "react";
 
 export default function Home() {
+  const creativeDashboard = {
+    url: "https://creative-recommendation-engine-for-video-ads-bcc6xhvz25jj7khcj.streamlit.app/?embedded=true",
+    fullUrl: "https://creative-recommendation-engine-for-video-ads-bcc6xhvz25jj7khcj.streamlit.app/",
+    title: "Creative Recommendation Engine for Video Ads Dashboard",
+  };
+
+  const adRelevanceDashboard = {
+    url: "https://ad-relevance-ctr-prediction-a6cwqh6yt5ljqkret9wchb.streamlit.app?embedded=true",
+    fullUrl: "https://ad-relevance-ctr-prediction-a6cwqh6yt5ljqkret9wchb.streamlit.app",
+    title: "Ad Relevance CTR Prediction Dashboard",
+  };
+
   const [showDashboard, setShowDashboard] = useState(false);
-
-  const dashboardUrl =
-    "https://creative-recommendation-engine-for-video-ads-bcc6xhvz25jj7khcj.streamlit.app/?embedded=true";
-
-  const dashboardUrlFull =
-    "https://creative-recommendation-engine-for-video-ads-bcc6xhvz25jj7khcj.streamlit.app/";
+  const [dashboardInfo, setDashboardInfo] = useState(creativeDashboard);
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -113,7 +120,10 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <button
-                onClick={() => setShowDashboard(true)}
+                onClick={() => {
+                  setDashboardInfo(creativeDashboard);
+                  setShowDashboard(true);
+                }}
                 className="rounded-xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-blue-400"
               >
                 Open Interactive Dashboard
@@ -198,6 +208,16 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
+              <button
+                onClick={() => {
+                  setDashboardInfo(adRelevanceDashboard);
+                  setShowDashboard(true);
+                }}
+                className="rounded-xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-blue-400"
+              >
+                Open Interactive Dashboard
+              </button>
+
               <a
                 href="https://github.com/EhsanMehryaar/Ad-Relevance-CTR-Prediction"
                 target="_blank"
@@ -335,13 +355,13 @@ export default function Home() {
                   Interactive Dashboard
                 </h3>
                 <p className="text-sm text-slate-400">
-                  Creative Recommendation Engine for Video Ads
+                  {dashboardInfo.title}
                 </p>
               </div>
 
               <div className="flex items-center gap-3">
                 <a
-                  href={dashboardUrlFull}
+                  href={dashboardInfo.fullUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/10"
@@ -359,8 +379,8 @@ export default function Home() {
             </div>
 
             <iframe
-              src={dashboardUrl}
-              title="Creative Recommendation Engine for Video Ads Dashboard"
+              src={dashboardInfo.url}
+              title={dashboardInfo.title}
               className="h-[calc(90vh-73px)] w-full bg-white"
               loading="lazy"
             />
