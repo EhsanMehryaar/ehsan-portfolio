@@ -15,6 +15,12 @@ export default function Home() {
     title: "Ad Relevance CTR Prediction Dashboard",
   };
 
+  const biddingOptimizationDashboard = {
+    url: "https://bidding-optimization-incrementality-measurement-simulator-nyjr.streamlit.app/?embedded=true",
+    fullUrl: "https://bidding-optimization-incrementality-measurement-simulator-nyjr.streamlit.app/",
+    title: "Bidding Optimization & Incrementality Measurement Simulator",
+  };
+
   const [showDashboard, setShowDashboard] = useState(false);
   const [dashboardInfo, setDashboardInfo] = useState(creativeDashboard);
 
@@ -98,6 +104,95 @@ export default function Home() {
             Featured Project
           </p>
           <h2 className="mt-3 text-4xl font-bold tracking-tight">
+            Bidding Optimization & Incrementality Measurement Simulator
+          </h2>
+          <p className="mt-4 max-w-3xl text-slate-300">
+            A simulator for bidding optimization and incrementality measurement,
+            helping advertisers test spend allocation, conversion lift, and
+            campaign efficiency in a product-style Streamlit interface.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          {/* Project Summary */}
+          <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-8">
+            <h3 className="text-2xl font-bold">Project Overview</h3>
+
+            <p className="mt-4 leading-7 text-slate-300">
+              This project simulates bidding optimization and incrementality
+              measurement workflows, allowing users to explore campaign-level
+              spend, lift, and return on ad spend scenarios with interactive
+              dashboards and evaluation metrics.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <button
+                onClick={() => {
+                  setDashboardInfo(biddingOptimizationDashboard);
+                  setShowDashboard(true);
+                }}
+                className="rounded-xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-blue-400"
+              >
+                Open Interactive Dashboard
+              </button>
+
+              <a
+                href="https://github.com/EhsanMehryaar/Bidding-Optimization-Incrementality-Measurement-Simulator"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
+              >
+                View GitHub Repository
+              </a>
+            </div>
+          </div>
+
+          {/* Problem Approach Outcome */}
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-200">
+                01
+              </div>
+              <h4 className="text-lg font-semibold">Problem</h4>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Measure incrementality while optimizing bids so advertisers can
+                understand true campaign lift and efficient spend.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-200">
+                02
+              </div>
+              <h4 className="text-lg font-semibold">Approach</h4>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Built a simulated adoption of ad campaigns, incrementality tests,
+                and optimization dashboards to compare outcomes across spend
+                scenarios.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-200">
+                03
+              </div>
+              <h4 className="text-lg font-semibold">Outcome</h4>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Delivered an interactive simulator for bidding and incrementality
+                measurement that supports decision-making with practical metrics
+                and scenario comparisons.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="mb-8">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-300">
+            Other Projects
+          </p>
+          <h2 className="mt-3 text-4xl font-bold tracking-tight">
             Creative Recommendation Engine for Video Ads
           </h2>
           <p className="mt-4 max-w-3xl text-slate-300">
@@ -107,7 +202,6 @@ export default function Home() {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          {/* Project Summary */}
           <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-8">
             <h3 className="text-2xl font-bold">Project Overview</h3>
 
@@ -140,7 +234,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Problem Approach Outcome */}
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6">
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-200">
@@ -183,7 +276,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="mb-8">
           <p className="text-sm font-semibold uppercase tracking-wider text-blue-300">
-            Previous Project
+            Other Project
           </p>
           <h2 className="mt-3 text-4xl font-bold tracking-tight">
             Ad Relevance & CTR Prediction
