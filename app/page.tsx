@@ -128,7 +128,9 @@ export default function Home() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="mailto:emehryaar@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=emehryaar@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-400"
             >
               Email Me
