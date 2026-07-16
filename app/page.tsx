@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { ProjectShowcase } from "./ProjectShowcase";
-import { featuredProject } from "./project-data";
+import { allProjects } from "./project-data";
 
 export default function Home() {
   return (
@@ -17,12 +16,9 @@ export default function Home() {
             <a href="#about" className="hover:text-white">
               About
             </a>
-            <a href="#project" className="hover:text-white">
-              Featured Project
-            </a>
-            <Link href="/projects" className="hover:text-white">
+            <a href="#projects" className="hover:text-white">
               Projects
-            </Link>
+            </a>
             <a href="#skills" className="hover:text-white">
               Skills
             </a>
@@ -52,10 +48,10 @@ export default function Home() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="#project"
+              href="#projects"
               className="rounded-xl bg-blue-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-blue-400"
             >
-              View Featured Project
+              View Projects
             </a>
           </div>
         </div>
@@ -74,16 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ProjectShowcase projects={[featuredProject]} />
-
-      <div className="mx-auto max-w-7xl px-6 pb-16 lg:px-8">
-        <Link
-          href="/projects"
-          className="inline-flex rounded-xl border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
-        >
-          More Projects
-        </Link>
-      </div>
+      <ProjectShowcase projects={allProjects} />
 
       <section id="skills" className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <h2 className="text-3xl font-bold">Skills</h2>

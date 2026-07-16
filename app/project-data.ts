@@ -138,3 +138,5 @@ export const otherProjects: Project[] = [
     ],
   },
 ];
+
+export const allProjects: Project[] = [featuredProject, ...otherProjects];
