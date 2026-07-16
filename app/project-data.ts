@@ -17,6 +17,36 @@ export type Project = {
   }[];
 };
 
+export const sarDocumentClassifierProject: Project = {
+  eyebrow: "Project",
+  title: "SAR Document Classifier",
+  summary:
+    "A document classification dashboard for identifying and organizing suspicious activity report content with an applied machine learning workflow.",
+  overview:
+    "This project demonstrates a document classification workflow for SAR-style records, using text processing, model inference, and an interactive Streamlit interface to help review and categorize compliance documents more efficiently.",
+  githubUrl: "https://github.com/EhsanMehryaar/sar-document-classifier",
+  dashboard: {
+    url: "https://sar-document-classifier-bepf7ekffmcqsecblhvpkt.streamlit.app/?embedded=true",
+    fullUrl:
+      "https://sar-document-classifier-bepf7ekffmcqsecblhvpkt.streamlit.app/",
+    title: "SAR Document Classifier Dashboard",
+  },
+  highlights: [
+    {
+      label: "Problem",
+      body: "Compliance teams need faster ways to triage and categorize SAR-related documents while keeping review workflows consistent and explainable.",
+    },
+    {
+      label: "Approach",
+      body: "Built a text classification workflow with document preprocessing, model-based category prediction, and a Streamlit dashboard for interactive review.",
+    },
+    {
+      label: "Outcome",
+      body: "Delivered a deployable demo that supports document intake, classification, and practical review of suspicious activity report content.",
+    },
+  ],
+};
+
 export const featuredProject: Project = {
   eyebrow: "Featured Project",
   title: "KYC Entity Resolution",
@@ -139,4 +169,8 @@ export const otherProjects: Project[] = [
   },
 ];
 
-export const allProjects: Project[] = [featuredProject, ...otherProjects];
+export const allProjects: Project[] = [
+  sarDocumentClassifierProject,
+  featuredProject,
+  ...otherProjects,
+];
