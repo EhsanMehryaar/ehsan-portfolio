@@ -17,6 +17,36 @@ export type Project = {
   }[];
 };
 
+export const dqEvalFrameworkProject: Project = {
+  eyebrow: "Project",
+  title: "DQ Eval Framework",
+  summary:
+    "A local Python toolkit for profiling tabular data quality and evaluating classification or regression models through reports, a CLI, and a Streamlit dashboard.",
+  overview:
+    "This project provides a local-only data quality and model evaluation workflow with machine-readable JSON, self-contained HTML reports, a Typer CLI, Streamlit dashboard, SQLite run history, drift checks, leakage heuristics, calibration metrics, and segment-level performance analysis.",
+  githubUrl: "https://github.com/EhsanMehryaar/dq-eval-framework",
+  dashboard: {
+    url: "https://dq-eval-framework-em24uzabqndot9ddwzhyt6.streamlit.app/?embedded=true",
+    fullUrl:
+      "https://dq-eval-framework-em24uzabqndot9ddwzhyt6.streamlit.app/",
+    title: "DQ Eval Framework Dashboard",
+  },
+  highlights: [
+    {
+      label: "Problem",
+      body: "Data and model quality checks are often scattered across notebooks, making drift, leakage, calibration, and segment performance harder to review consistently.",
+    },
+    {
+      label: "Approach",
+      body: "Built a reusable framework for data profiling, model evaluation, structured reporting, dashboard review, local run history, and configurable checks for classification or regression workflows.",
+    },
+    {
+      label: "Outcome",
+      body: "Delivered a local, extensible evaluation toolkit that produces repeatable reports and interactive diagnostics without requiring cloud services or API keys.",
+    },
+  ],
+};
+
 export const sarDocumentClassifierProject: Project = {
   eyebrow: "Project",
   title: "SAR Document Classifier",
@@ -170,6 +200,7 @@ export const otherProjects: Project[] = [
 ];
 
 export const allProjects: Project[] = [
+  dqEvalFrameworkProject,
   sarDocumentClassifierProject,
   featuredProject,
   ...otherProjects,
